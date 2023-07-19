@@ -79,7 +79,7 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @yield('content') <!--@sectionでつけた名前と@yieldでつけた名前が一致したら表示-->
         </main>
     </div>
     <footer>

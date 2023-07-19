@@ -8,8 +8,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests; //ValidatesRequests
 use Illuminate\Routing\Controller as BaseController; //ControllerをBaseControllerとして使う
 class Controller extends BaseController //BaseControllerを拡張するControllerクラス
 {
-    public function __construct(){
-    $this->middleware('auth');
+    public function __construct(){ //コンストラクタでauth機能を読み込む
+    $this->middleware('auth'); //ログインできているか確認
   }
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests; //Controllerクラス内でAuthorizesRequests, DispatchesJobs, ValidatesRequestsを使う
 }

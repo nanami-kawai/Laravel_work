@@ -3,10 +3,10 @@
 <div class='container'> <!--containerクラス-->
   <p class="pull-right"><a class="btn btn-success" href="/create-form">投稿する</a></p> <!--投稿するボタン-->
   <h2 class='page-header'>投稿一覧</h2> <!--タイトル-->
-  <div id="search">
-      <form action="/index" method="get">
-          <input type="text" name="keyword" placeholder="キーワードを入力">
-          <input type="submit" name="submit" value="検索">
+  <div id="search"> <!--検索ボタン-->
+      <form action="/index" method="get"> <!--indexページにget通信で送る-->
+          <input type="text" name="keyword" placeholder="キーワードを入力"> <!--入力欄-->
+          <input type="submit" name="submit" value="検索"> <!--ボタン-->
       </form>
   </div>
   <table class='table table-hover'> <!--表-->
