@@ -28,6 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
+    //protected $redirectTo = 'index'; //ログイン成功後は投稿一覧ページに遷移
     protected $redirectTo = '/index'; //ログイン成功後は投稿一覧ページに遷移
 
     /**

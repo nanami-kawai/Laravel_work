@@ -5,10 +5,15 @@
   {!! Form::open(['url' => 'post/create']) !!} <!--urlが 'post/create' となっているところにフォームの値を送る-->
   <div class="form-group">
   {{ Form::label('user_name', '名前：') }} <!-- デフォルトでユーザー登録した名前を入力しておく。ユーザーの判断で変更可能 -->
-  {{ Form::input('text', 'userName',  Auth::user()->name) }} <!--ユーザー名-->
+  <!-- {{ Form::input('text', 'userName',  Auth::user()->name) }} -->
+  {{ Form::label('iUserName',  Auth::user()->name) }}
+  {!! Form::hidden('userName', Auth::user()->name) !!} <!--id-->
   </div>
   <div class="form-group">
   {!! Form::input('text', 'newContents', null, ['required', 'class' => 'form-control', 'placeholder' => '投稿内容']) !!} <!--投稿内容-->
+  @error('newContents')
+    <div class="alert alert-danger">{{ $message }}</div>
+  @enderror
   </div>
   <button type="submit" class="btn btn-success pull-right">追加</button> <!--追加ボタン-->
   {!! Form::close() !!} <!--フォームを閉じる-->

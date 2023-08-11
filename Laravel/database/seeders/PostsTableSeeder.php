@@ -16,25 +16,15 @@ class PostsTableSeeder extends Seeder
     {
         DB::table('posts')->insert([
 
-        ['contents' => '1つ目の投稿になります'],
+        ['user_name' => 'aaa','contents' => '1つ目の投稿になります'],
 
-        ['contents' => '2つ目の投稿になります'],
+        ['user_name' => 'bbb','contents' => '2つ目の投稿になります'],
 
-        ['contents' => '3つ目の投稿になります'],
+        ['user_name' => 'ccc','contents' => '3つ目の投稿になります'],
 
-        ['contents' => '4つ目の投稿になります'],
+        ['user_name' => 'ddd','contents' => '4つ目の投稿になります'],
 
-        ['contents' => '5つ目の投稿になります']
-
-        ['user_name' => 'aaa'],
-
-        ['user_name' => 'bbb'],
-
-        ['user_name' => 'ccc'],
-
-        ['user_name' => 'ddd'],
-
-        ['user_name' => 'eee'],
+        ['user_name' => 'eee','contents' => '5つ目の投稿になります']
 
         ]);
     }

@@ -6,6 +6,9 @@
   <div class="form-group">
   {!! Form::hidden('id', $contents->id) !!} <!--id-->
   {!! Form::input('text', 'upContents', $contents->contents, ['required', 'class' => 'form-control']) !!} <!--更新する内容-->
+  @error('upContents')
+    <div class="alert alert-danger">{{ $message }}</div>
+  @enderror
   </div>
   <button type="submit" class="btn btn-primary pull-right">更新</button> <!--更新ボタン-->
   {!! Form::close() !!} <!--フォームを閉じる-->

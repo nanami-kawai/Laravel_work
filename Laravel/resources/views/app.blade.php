@@ -9,7 +9,7 @@
     <header> <!--ページトップ-->
       <h1 class='page-header'>掲示板</h1> <!--タイトル-->
     </header>
-    @yield('content') <!--＠section('')でつけた名前とyield('')でつけた名前が一致していれば表示-->
+    @yield('content')
     <footer> <!--ページの最後-->
       <small>Laravel_work</small> <!--一回り小さいテキスト-->
     </footer>

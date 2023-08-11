@@ -15,10 +15,11 @@ use App\Http\Controllers\PostsController; //PostsControllerクラスを呼び出
 */
 
 Route::get('/', function () { //https://127.0.0.1:8000/で
-    return view('welcome'); //welcome.blade.phpを表示
+    //return view('auth/login'); //login.blade.phpを表示
+    return redirect('/login');
 });
 Auth::routes(); //authのルーティング
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home'); //homeページでHomeControllerクラスのindexメソッド処理を実行し、名前をhomeとする
+Route::get('/index', [App\Http\Controllers\Controller::class, 'index'])->name('index'); //homeページでHomeControllerクラスのindexメソッド処理を実行し、名前をhomeとする
 Route::get('index',[PostsController::class,'index']); //indexページでPostControllerのindexメソッド処理を実行
 Route::get('/create-form', [PostsController::class, 'createForm']); //create-formページでPostControllerのcreateFormメソッド処理を実行
 Route::post('post/create', [PostsController::class, 'create']); //createページでPostControllerのcreateメソッド処理を実行
